@@ -1,0 +1,12 @@
+html {
+    /* Temp */
+    background: rgba(47, 48, 50, 1);
+}
+
+.text-black {
+    color: rgba(0, 0, 0, 1);
+}
+
+.text-white {
+    color: rgba(255, 255, 255, 1);
+}

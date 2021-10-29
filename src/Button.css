@@ -1,0 +1,51 @@
+button {
+    /* backdrop-filter won't work in Firefox at the moment */
+
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    -webkit-appearance: button;
+    font-size: 100%;
+    margin: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+@supports(backdrop-filter: none) or (-webkit-backdrop-filter: none) {
+    button {
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+    }
+}
+
+.primary-button {
+    background: rgba(4, 120, 87, 0.25);
+    /* Transparent border preserves size relative to the other buttons */
+    border: 1px solid transparent;
+}
+
+.primary-button:hover {
+    background: rgba(4, 120, 87, 0.75);
+}
+
+.outline-button {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(4, 120, 87, 0.4)
+}
+
+.outline-button:hover {
+    background: rgba(4, 120, 87, 0.75);
+}
+
+.unstyled-button {
+    background: rgba(0, 0, 0, 0);
+    /* Transparent border preserves size relative to the other buttons */
+    border: 1px solid transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.unstyled-button:focus {
+    border: 1px solid rgba(4, 120, 87, 0.4)
+}
