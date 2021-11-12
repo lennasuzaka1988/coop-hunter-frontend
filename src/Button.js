@@ -19,7 +19,7 @@ function Button(props) {
         <div>
             <button
                 type={props.buttonType}
-                className={props.buttonStyle + "-button " + "text-" + props.buttonTextColor}
+                className={props.buttonStyle + '-button text-' + props.buttonTextColor}
                 onClick={props.onButtonClick}
             >
                 {props.buttonText}

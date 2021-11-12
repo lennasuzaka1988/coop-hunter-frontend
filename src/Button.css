@@ -1,6 +1,4 @@
 button {
-    /* backdrop-filter won't work in Firefox at the moment */
-
     font-weight: 700;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -12,6 +10,7 @@ button {
 }
 
 @supports(backdrop-filter: none) or (-webkit-backdrop-filter: none) {
+    /* backdrop-filter won't work in Firefox at the moment */
     button {
         backdrop-filter: blur(13px);
         -webkit-backdrop-filter: blur(13px);
